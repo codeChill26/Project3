@@ -1,0 +1,66 @@
+/* CSS cơ bản cho ảnh và layout */
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+div img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+div {
+    display: inline-block; /* Thay đổi từ block thành inline-block */
+    width: 100%; /* Đặt chiều rộng ban đầu là 100% */
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 2px;
+}
+
+/* Media Query 1: Màn hình từ 772px trở lên */
+@media only screen and (min-width: 772px) {
+    div {
+        width: 45%; /* Chiếm 45% của viewport */
+    }
+
+    div img {
+        max-height: 30vh; /* Chiều cao tối đa 30% viewport */
+    }
+}
+
+/* Media Query 2: Màn hình từ 998px trở lên */
+@media only screen and (min-width: 998px) {
+    div {
+        width: 30%; /* Chiếm 30% của viewport */
+    }
+
+    div img {
+        max-height: 40vh; /* Chiều cao tối đa 40% viewport */
+    }
+}
+
+/* Thay đổi bố cục khi kéo lớn */
+@media only screen and (min-width: 1200px) {
+    div {
+        width: 22%; /* Khi màn hình lớn hơn 1200px, các div sẽ chiếm 22% chiều rộng */
+    }
+}
